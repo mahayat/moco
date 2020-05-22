@@ -11,12 +11,12 @@ import torchvision.datasets as datasets
 #        q = self.base_transform(x)
 #        k = self.base_transform(x)
 #        return [q, k]
-#%%    
-traindir = '/global/cscratch1/sd/wbhimji/imagenet/train/'
-# https://pytorch.org/docs/stable/torchvision/datasets.html#imagefolder
+#%% Dataset 
+traindir = '/global/cscratch1/sd/wbhimji/imagenet/'
+## https://pytorch.org/docs/stable/torchvision/datasets.html#imagefolder
 #train_dataset = datasets.ImageFolder(traindir)
-# https://pytorch.org/docs/stable/torchvision/datasets.html#imagenet
-train_dataset = datasets.ImageNet(traindir)
+## https://pytorch.org/docs/stable/torchvision/datasets.html#imagenet
+train_dataset = datasets.ImageNet(traindir, split='train')
 print(train_dataset[1][0].shape)
 #%%
 
