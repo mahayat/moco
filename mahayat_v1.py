@@ -12,7 +12,8 @@ import torchvision.datasets as datasets
 #        k = self.base_transform(x)
 #        return [q, k]
 #%% Dataset 
-traindir = '/global/cscratch1/sd/wbhimji/imagenet/raw_data/'
+#traindir = '/global/cscratch1/sd/wbhimji/imagenet/raw_data/'
+traindir = '/global/cscratch1/sd/wbhimji/imagenet/combined/'
 
 ## https://pytorch.org/docs/stable/torchvision/datasets.html#imagefolder
 #train_dataset = datasets.ImageFolder(traindir)
