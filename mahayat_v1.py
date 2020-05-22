@@ -13,10 +13,13 @@ import torchvision.datasets as datasets
 #        return [q, k]
 #%% Dataset 
 traindir = '/global/cscratch1/sd/wbhimji/imagenet/raw_data/'
+
 ## https://pytorch.org/docs/stable/torchvision/datasets.html#imagefolder
 #train_dataset = datasets.ImageFolder(traindir)
+
 ## https://pytorch.org/docs/stable/torchvision/datasets.html#imagenet
-train_dataset = datasets.ImageNet(traindir)
+train_dataset = datasets.ImageNet(traindir, split='train')
+
 print('shape of sample#1: {}'.format(train_dataset[1][0].shape))
 print('shape of target#1: {}'.format(train_dataset[1][1].shape))
 #%%
